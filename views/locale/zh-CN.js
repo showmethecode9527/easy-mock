@@ -68,7 +68,8 @@ export default {
       form: {
         button: '开始吧 | 登录',
         placeholder: '用户名，没有会自动注册哦 | LDAP 用户名',
-        password: '密码'
+        password: '密码',
+        registerCode: '注册码（仅注册时需要）'
       },
       about: 'Easy Mock 是什么？| 是一个可视化，并且能快速生成模拟数据的服务。',
       feature: [
@@ -81,7 +82,7 @@ export default {
       ],
       confirm: {
         register: {
-          content: '该用户不存在, 是否根据当前输入的用户名和密码注册用户?注：请妥善保管好你的密码，目前无法提供找回密码的通道。',
+          content: '该用户不存在, 是否根据当前输入的用户名和密码注册用户（需要使用注册码注册）?注：请妥善保管好你的密码，目前无法提供找回密码的通道。',
           success: '注册成功'
         }
       }

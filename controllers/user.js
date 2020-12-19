@@ -45,9 +45,15 @@ module.exports = class UserController {
   static async register (ctx) {
     const name = ctx.checkBody('name').notEmpty().len(4, 20).value
     const password = ctx.checkBody('password').notEmpty().len(6, 20).value
+    const registerCode = ctx.checkBody('registerCode').notEmpty().len(6, 8).value
 
     if (ctx.errors) {
       ctx.body = ctx.util.refail(null, 10001, ctx.errors)
+      return
+    }
+
+    if (!['112358', '10249527'].includes(registerCode)) {
+      ctx.body = ctx.util.refail('注册码错误！')
       return
     }
 

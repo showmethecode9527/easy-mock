@@ -1,6 +1,6 @@
 {
   "port": 7300,
-  "host": "0.0.0.0",
+  "host": "192.168.1.8",
   "pageSize": 30,
   "proxy": false,
   "db": "mongodb://localhost/easy-mock",

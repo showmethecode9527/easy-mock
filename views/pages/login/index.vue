@@ -22,6 +22,9 @@
             <i-input size="large"
               :placeholder="$t('p.login.form.password')"
               type="password" v-model="password" @on-enter="login"></i-input>
+            <i-input size="large"
+              :placeholder="$t('p.login.form.registerCode')"
+              type="password" v-model="registerCode" @on-enter="login"></i-input>
           </div>
         </transition>
       </div>
@@ -185,6 +188,7 @@ export default {
       page: 0,
       userName: this.$ls.get('last-user'),
       password: '',
+      registerCode: '', // 注册邀请码
       copyright: config.copyright,
       featureVisible: false,
       wallpaperVisible: false
@@ -274,7 +278,8 @@ export default {
       api.u.register({
         data: {
           name: this.userName,
-          password: this.password
+          password: this.password,
+          registerCode: this.registerCode
         }
       }).then((res) => {
         if (res.data.success) {

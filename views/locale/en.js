@@ -68,7 +68,8 @@ export default {
       form: {
         button: 'Let\'go | Login',
         placeholder: 'Username, will register if user doesn\'t exsit | LDAP Username',
-        password: 'Password'
+        password: 'Password',
+        registerCode: 'Register Code（necessary for register）'
       },
       about: 'What is Easy Mock? | A vitrual API mock up tool, and generate mock up data.',
       feature: [
@@ -81,7 +82,7 @@ export default {
       ],
       confirm: {
         register: {
-          content: 'User does\'t exsit, do you want create a new user with this username and password? Notice: You cannot retrieve your password if you forget in this version',
+          content: 'User does\'t exsit, do you want create a new user with this username and password(a register code is neccessary)? Notice: You cannot retrieve your password if you forget in this version',
           success: 'Register Success'
         }
       }
